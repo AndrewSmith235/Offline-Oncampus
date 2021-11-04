@@ -13,6 +13,7 @@
 		849BCF0A271F368700C9CEA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849BCF09271F368700C9CEA7 /* Preview Assets.xcassets */; };
 		849BCF15271F368700C9CEA7 /* Offline_OncampusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BCF14271F368700C9CEA7 /* Offline_OncampusTests.swift */; };
 		849BCF20271F368700C9CEA7 /* Offline_OncampusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BCF1F271F368700C9CEA7 /* Offline_OncampusUITests.swift */; };
+		849BCF2E27303EDD00C9CEA7 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BCF2D27303EDD00C9CEA7 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		849BCF1B271F368700C9CEA7 /* Offline OncampusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Offline OncampusUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		849BCF1F271F368700C9CEA7 /* Offline_OncampusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offline_OncampusUITests.swift; sourceTree = "<group>"; };
 		849BCF21271F368700C9CEA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849BCF2D27303EDD00C9CEA7 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				849BCF02271F368400C9CEA7 /* Offline_OncampusApp.swift */,
 				849BCF04271F368400C9CEA7 /* ContentView.swift */,
 				849BCF06271F368700C9CEA7 /* Assets.xcassets */,
+				849BCF2D27303EDD00C9CEA7 /* SwiftUIView.swift */,
 				849BCF0B271F368700C9CEA7 /* Info.plist */,
 				849BCF08271F368700C9CEA7 /* Preview Content */,
 			);
@@ -261,6 +264,7 @@
 			files = (
 				849BCF05271F368400C9CEA7 /* ContentView.swift in Sources */,
 				849BCF03271F368400C9CEA7 /* Offline_OncampusApp.swift in Sources */,
+				849BCF2E27303EDD00C9CEA7 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
