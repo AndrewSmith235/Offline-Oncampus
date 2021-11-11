@@ -69,18 +69,65 @@ struct ContentView: View {
                                 .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
                                 .fontWeight(.bold)
                         }
+                    Text("Tue")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .tabItem {
+                            Text("TUE")
+                                .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                                .fontWeight(.bold)
+                        }
+                    Text("Wed")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .tabItem {
+                            Text("WED")
+                                .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                                .fontWeight(.bold)
+                        }
+                    Text("Thu")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .tabItem {
+                            Text("THU")
+                                .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                                .fontWeight(.bold)
+                        }
+                    Text("Fri")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .tabItem {
+                            Text("FRI")
+                                .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                                .fontWeight(.bold)
+                        }
                 }
                 HStack{
-                    Text("S")
+                HStack{
+                    Spacer()
                     Text("M")
+                    Spacer()
+                    Spacer()
                     Text("T")
-                    Text("W")
-                    Text("T")
-                    Text("F")
-                    Text("S")
+                    Spacer()
+                    Spacer()
+                    
                 }
                 .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                .offset( y: 250)
+                HStack{
+                    Text("W")
+                }.font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                .offset(x: 0, y: 250)
+                HStack{
+                    Spacer()
+                    Spacer()
+                    Text("T").offset(x: -5)
+                    Spacer()
+                    Spacer()
+                    Text("F")
+                    Spacer()
                 }
+                .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                .offset(x: 0, y: 250)
+                }
+            }
             }
             
             
