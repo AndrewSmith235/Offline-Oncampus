@@ -62,10 +62,10 @@ struct ContentView: View {
                  .offset(x: 0, y: 50)*/
               
                 TabView {
-                    Text("Sun")
+                    Text("Mon")
                         .font(.system(size: 30, weight: .bold, design: .rounded))
                         .tabItem {
-                            Text("SUN")
+                            Text("MON")
                                 .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
                                 .fontWeight(.bold)
                         }
