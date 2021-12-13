@@ -6,10 +6,57 @@
 //
 
 import SwiftUI
+import Foundation
+
+
+
 
 
 
 struct ContentView: View {
+    
+    class ViewController : UIViewController {
+        override func viewDidLoad() {
+            super.viewDidLoad()
+        
+            let url = "https://api.sunrise-sunset.org/json"
+            getdata(from: url)
+        }
+
+        func getdata(from url: String) {
+            let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
+            guard let data = data,  error == nil else {
+                print("error")
+                return
+            }
+                
+                var result: Response?
+                do{
+                    result = try JSONDecoder().decode(Response.self, from: data)
+                }
+                catch{
+                    print("failed to convert \(error.localizedDescription)")
+                }
+                guard let json = result else {
+                    return
+                }
+                print(json.status)
+                print(json.results.sunrise)
+                print("test")
+            })
+            task.resume()
+        }
+        
+    }
+    struct Response: Codable {
+        let results: MyResult
+        let status: String
+    }
+
+    struct MyResult: Codable {
+        let sunrise: String
+    }
+    
     
     @State var day: String = "Blank"
     
@@ -63,7 +110,7 @@ struct ContentView: View {
                 
                 TabView {
                     VStack{
-                       Text("Computer Science"+" 8:45")
+                       Text("Computer Science 8:45")
                         //Text("varScheduleItem1"+" varScheduleTime1")
                     }//modifiers to make look nice
                         .tabItem {
@@ -138,45 +185,7 @@ struct ContentView: View {
 
 
 
-class ViewController : UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
-        let url = "https://api.sunrise-sunset.org/json"
-        getdata(from: url)
-    }
 
-    private func getdata(from url: String) {
-        URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
-        guard let data = data,  error == nil else {
-            print("error")
-            return
-        }
-            
-            var result: Response?
-            do{
-                result = try JSONDecoder().decode(Response.self, from: data)
-            }
-            catch{
-                print("failed to convert \(error.localizedDescription)")
-            }
-            guard let json = result else {
-                return
-            }
-            print(json.status)
-            print(json.results.sunrise)
-            
-        }).resume()
-}
-}
-struct Response: Codable {
-    let results: MyResult
-    let status: String
-}
-
-struct MyResult: Codable {
-    let sunrise: String
-}
 
 
 
